@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Performer 1",
+    "bio": "Biography of Performer 1",
+    "img": "path/to/image1.jpg",
+    "albums": [101, 102],
+    "spotifyPath": "https://spotify.com/performer1"
+  },
+  {
+    "id": 2,
+    "name": "Performer 2",
+    "bio": "Biography of Performer 2",
+    "img": "path/to/image2.jpg",
+    "albums": [103, 104],
+    "spotifyPath": "https://spotify.com/performer2"
+  }
+]

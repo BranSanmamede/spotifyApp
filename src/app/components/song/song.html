@@ -1,0 +1,15 @@
+<div class="songs" *ngIf="songs; else loading">
+  <div *ngFor="let song of songs" (click)="showSong(song.id)" class="song">
+    <div>
+      <img [src]="song.img" alt="{{ song.name }}" width="100">
+    </div>
+    <div>
+      <p>{{ song.name }}</p>
+      <button *ngFor="let performerId of song.performers" (click)="showPerformer(performerId, $event)">{{ getPerformerName(performerId) }}</button>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p>Cargando canciones...</p>
+</ng-template>
