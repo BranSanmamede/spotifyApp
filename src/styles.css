@@ -5,11 +5,40 @@
     padding: 20px;
     display: flex;
     flex-flow: wrap;
-    align-items: center;
-    justify-content: space-between;
+    box-shadow: 0 0 20px 0 #1ed760;
+    z-index: 10000;
 }
 
 .header svg {
-    width: 40px;
+    width: auto;
     height: 40px;
+}
+
+.header li {
+    display: flex;
+    flex-flow: wrap;
+    align-items: end;
+    color: #fff;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.header li span{
+    position: relative;
+}
+
+.header li span:before{
+    content: '';
+    position: absolute;
+    background: transparent;
+    bottom: calc(50% - 32px);
+    transition: 0.5s;
+    height: 4px;
+    z-index: 1;
+}
+
+.header li:hover span:before{
+    left: 0;
+    right: 0;
+    background: #1ed760;
 }

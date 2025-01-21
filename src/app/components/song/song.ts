@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Song, SongService } from '../../services/songService';
-import { Router } from '@angular/router';
-import { PerformerService } from '../../services/performerService';
+import { ActivatedRoute } from '@angular/router';
+import { UtilService } from '../../services/utilService';
+import { Song } from '../../interfaces/song';
+import { Performer } from '../../interfaces/performer';
 
 @Component({
   selector: 'app-song',
@@ -10,25 +11,17 @@ import { PerformerService } from '../../services/performerService';
 })
 export class SongComponent implements OnInit{
   
-  songs: Song[] = [];
+  song: Song | undefined;
+  performers: Performer[] = [];
   
-  constructor(private songService: SongService, private performerService: PerformerService,private router: Router) {}
+  constructor(private utilService: UtilService, private activatedRoute: ActivatedRoute){}
   
   ngOnInit() {
-    this.songs = this.songService.songs;
-  }
-
-  getPerformerName(id: number): string {
-    let performer = this.performerService.getPerformerByID(id);
-    return performer ? performer.name : "undefined";
-  }
-  
-  showSong(id: number) {
-    this.router.navigate(['/song', id]);
-  }
-  
-  showPerformer(id: number, event: MouseEvent) {
-    event.stopPropagation();
-    this.router.navigate(['/performer', id]);
+    this.activatedRoute.params.subscribe(params => {
+      this.song = this.utilService.getSongByID(parseInt(params['id']));
+      if(this.song) {
+        this.performers = this.song.performers.map(id => this.utilService.getPerformerByID(id)).filter((performer): performer is Performer => performer !== undefined);
+      }
+    });
   }
 }

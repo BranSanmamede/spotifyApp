@@ -1,15 +1,13 @@
-<div class="songs" *ngIf="songs; else loading">
-  <div *ngFor="let song of songs" (click)="showSong(song.id)" class="song">
-    <div>
-      <img [src]="song.img" alt="{{ song.name }}" width="100">
-    </div>
-    <div>
-      <p>{{ song.name }}</p>
-      <button *ngFor="let performerId of song.performers" (click)="showPerformer(performerId, $event)">{{ getPerformerName(performerId) }}</button>
-    </div>
-  </div>
+<div *ngIf="song !== undefined; else notFound">
+    <h2>{{ song?.name }}</h2>
+    <img [src]="song?.img" alt="{{ song?.name }}" />
+    
+    <h3>Artistas:</h3>
+    <ul>
+        <li *ngFor="let performer of performers">{{ performer?.name }}</li>
+    </ul>
 </div>
 
-<ng-template #loading>
-  <p>Cargando canciones...</p>
+<ng-template #notFound>
+    <p>La canción no fue encontrada.</p>
 </ng-template>
