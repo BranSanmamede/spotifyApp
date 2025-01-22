@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './components/home/home';
+import { HeaderComponent } from './components/header/header';
+import { SongsComponent } from './components/songs/songs';
+import { PerformersComponent } from './components/performers/performers';
+import { SongComponent } from './components/song/song';
 
 
 const routes: Routes = [
-  { path: "header", loadChildren: () => import('./components/header/header').then(m => m.HeaderComponent) },
-  { path: "home", loadChildren: () => import('./components/home/home').then(m => m.HomeComponent) },
-  { path: "songs", loadChildren: () => import('./components/songs/songs').then(m => m.SongsComponent) },
-  { path: "performers", loadChildren: () => import('./components/performers/performers').then(m => m.PerformerComponent) },
-  { path: "song/:id", loadChildren: () => import('./components/song/song').then(m => m.SongComponent) },
+  { path: "header", component: HeaderComponent },
+  { path: 'home', component: HomeComponent },
+  { path: "songs", component: SongsComponent },
+  { path: "performers", component: PerformersComponent },
+  { path: "song/:id", component: SongComponent },
   { path: "**", pathMatch: "full", redirectTo: "home"}
 ];
 

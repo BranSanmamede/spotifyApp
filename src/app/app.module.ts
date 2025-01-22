@@ -5,7 +5,7 @@ import { HeaderComponent } from './components/header/header';
 import { AppRoutingModule } from './app-routing.module';
 import { UtilService } from './services/utilService';
 import { SongsComponent } from './components/songs/songs';
-import { PerformerComponent } from './components/performers/performers';
+import { PerformersComponent } from './components/performers/performers';
 import { HomeComponent } from './components/home/home';
 
 @NgModule({
@@ -14,7 +14,7 @@ import { HomeComponent } from './components/home/home';
     HeaderComponent,
     HomeComponent,
     SongsComponent,
-    PerformerComponent
+    PerformersComponent
   ],
   imports: [
     BrowserModule,

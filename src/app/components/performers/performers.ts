@@ -8,7 +8,7 @@ import { Performer } from '../../interfaces/performer';
     standalone: false,
     templateUrl: './performers.html'
 })
-export class PerformerComponent implements OnInit{
+export class PerformersComponent implements OnInit{
     
     performers: Performer[] = [];
     

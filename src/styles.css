@@ -5,13 +5,30 @@
     padding: 20px;
     display: flex;
     flex-flow: wrap;
-    box-shadow: 0 0 20px 0 #1ed760;
     z-index: 10000;
+}
+
+.header > div {
+    display: flex;
+    flex-flow: wrap;
+    align-items: end;
+    justify-content: space-around;
+    margin-right: auto;
+}
+
+.header a {
+    text-decoration: none;
+    color: unset;
 }
 
 .header svg {
     width: auto;
     height: 40px;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
 }
 
 .header li {
@@ -25,9 +42,10 @@
 
 .header li span{
     position: relative;
+    font: 14px 'Open Sans', sans-serif;
 }
 
-.header li span:before{
+.header li span:after{
     content: '';
     position: absolute;
     background: transparent;
@@ -37,7 +55,7 @@
     z-index: 1;
 }
 
-.header li:hover span:before{
+.header li:hover span:after{
     left: 0;
     right: 0;
     background: #1ed760;
