@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Album 1",
+    "img": "path/to/image1.jpg",
+    "songs": [1, 2]  
+  },
+  {
+    "id": 2,
+    "name": "Album 2",
+    "img": "path/to/image2.jpg",
+    "songs": [2, 3]
+  }
+]  

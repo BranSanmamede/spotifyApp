@@ -4,17 +4,21 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header';
 import { AppRoutingModule } from './app-routing.module';
 import { UtilService } from './services/utilService';
-import { SongsComponent } from './components/songs/songs';
+import { AlbumComponent } from './components/album/album';
 import { PerformersComponent } from './components/performers/performers';
 import { HomeComponent } from './components/home/home';
+import { SongComponent } from './components/song/song';
+import { FooterComponent } from './components/footer/footer';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    FooterComponent,
     HomeComponent,
-    SongsComponent,
-    PerformersComponent
+    AlbumComponent,
+    PerformersComponent,
+    SongComponent
   ],
   imports: [
     BrowserModule,

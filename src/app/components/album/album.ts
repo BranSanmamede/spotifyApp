@@ -4,11 +4,11 @@ import { Song } from '../../interfaces/song';
 import { UtilService } from '../../services/utilService';
 
 @Component({
-  selector: 'app-songs',
+  selector: 'app-album',
   standalone: false,
-  templateUrl: './songs.html'
+  templateUrl: './album.html'
 })
-export class SongsComponent implements OnInit{
+export class AlbumComponent implements OnInit{
   
   songs: Song[] = [];
   
@@ -18,9 +18,8 @@ export class SongsComponent implements OnInit{
     this.songs = this.utilService.getSongs();
   }
 
-  getPerformerName(id: number) : string {
-    let performer = this.utilService.getPerformerByID(id);
-    return performer ? performer.name : "Desconocido";
+  getPerformerName(id: number) {
+    return this.utilService.getPerformerByID(id)?.name;
   }
   
   showSong(id: number) {

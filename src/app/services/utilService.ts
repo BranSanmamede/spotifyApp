@@ -1,14 +1,21 @@
 import { Injectable } from '@angular/core';
 import performers from '../../../public/json/performers.json';
 import songs from '../../../public/json/songs.json';
+import albums from '../../../public/json/albums.json';
 import { Performer } from '../interfaces/performer';
 import { Song } from '../interfaces/song';
+import { Album } from '../interfaces/album';
 
 @Injectable()
 export class UtilService {
   
   private performers:Performer[] = performers;
   private songs:Song[] = songs;
+  private albums:Album[] = albums;
+  
+  getAlbums() {
+    return this.albums;
+  }
   
   getSongs() {
     return this.songs;
@@ -16,6 +23,10 @@ export class UtilService {
   
   getPerformers() {
     return this.performers;
+  }
+  
+  getAlbumByID(id: number): Album | undefined{
+    return this.albums.find(album => album.id === id);
   }
   
   getSongByID(id: number): Song | undefined{

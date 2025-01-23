@@ -4,8 +4,12 @@
       <img [src]="song.img" alt="{{ song.name }}" width="100">
     </div>
     <div>
-      <p>{{ song.name }}</p>
-      <button *ngFor="let performerId of song.performers" (click)="showPerformer(performerId, $event)">{{ getPerformerName(performerId) }}</button>
+      <p>{{ song.name }}</p> 
+      <div>
+        <ng-container *ngFor="let performerId of song.performers">
+          <button *ngIf="getPerformerName(performerId)" (click)="showPerformer(performerId, $event)">{{ getPerformerName(performerId) }}</button>
+        </ng-container>
+      </div>
     </div>
   </div>
 </div>
