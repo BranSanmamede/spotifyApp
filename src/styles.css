@@ -2,6 +2,7 @@
     position: sticky;
     top: 0;
     background-color: #121212;
+    box-shadow: 5px 0 10px 2px #094136;
     padding: 10px 20px;
     display: flex;
     flex-flow: wrap;
@@ -61,11 +62,36 @@
     background: #1ed760;
 }
 
-.home {
+.bodyClass {
     background-color: #1c2833;
     display: flex;
     flex-flow: column;
     justify-content: space-around;
+}
+
+.albumTitle {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    font: bold 40px Courier, sans-serif;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.albumTitle div:first-child {
+    height: 160px;
+    width: 160px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.albumTitle p {
+    margin-bottom: 0;
 }
 
 .songs {

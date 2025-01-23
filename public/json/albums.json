@@ -1,14 +1,62 @@
 [
   {
-    "id": 1,
-    "name": "Album 1",
-    "img": "path/to/image1.jpg",
-    "songs": [1, 2]  
+      "id": 1,
+      "name": "Midnight Vibes",
+      "img": "https://example.com/images/album1.jpg",
+      "songs": [1, 2, 3, 4]
   },
   {
-    "id": 2,
-    "name": "Album 2",
-    "img": "path/to/image2.jpg",
-    "songs": [2, 3]
+      "id": 2,
+      "name": "Summer Dreams",
+      "img": "https://example.com/images/album2.jpg",
+      "songs": [5, 6, 7, 8]
+  },
+  {
+      "id": 3,
+      "name": "Electric Love",
+      "img": "https://example.com/images/album3.jpg",
+      "songs": [9, 10, 11, 12]
+  },
+  {
+      "id": 4,
+      "name": "Retro Rhythms",
+      "img": "https://example.com/images/album4.jpg",
+      "songs": [13, 14, 15, 16]
+  },
+  {
+      "id": 5,
+      "name": "Dreams in Motion",
+      "img": "https://example.com/images/album5.jpg",
+      "songs": [17, 18, 19, 20]
+  },
+  {
+      "id": 6,
+      "name": "Feel the Beat",
+      "img": "https://example.com/images/album6.jpg",
+      "songs": [21, 22, 23, 24]
+  },
+  {
+      "id": 7,
+      "name": "Mystic Waves",
+      "img": "https://example.com/images/album7.jpg",
+      "songs": [25, 26, 27, 28]
+  },
+  {
+      "id": 8,
+      "name": "Lost in Time",
+      "img": "https://example.com/images/album8.jpg",
+      "songs": [29, 30, 31, 32]
+  },
+  {
+      "id": 9,
+      "name": "Moonlit Garden",
+      "img": "https://example.com/images/album9.jpg",
+      "songs": [33, 34, 35, 36]
+  },
+  {
+      "id": 10,
+      "name": "Waves of Sound",
+      "img": "https://example.com/images/album10.jpg",
+      "songs": [37, 38, 39, 40]
   }
-]  
+]
