@@ -76,7 +76,7 @@
     justify-content: space-evenly;
     font: bold 40px Courier, sans-serif;
     color: #fff;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 .albumTitle div:first-child {
@@ -94,6 +94,10 @@
     margin-bottom: 0;
 }
 
+.albumTitle img {
+    width: 100%;
+}
+
 .songs {
     display: flex;
     flex-flow: wrap;
@@ -104,6 +108,8 @@
 .song {
     display: flex;
     flex-flow: column;
+    align-items: center;
+    justify-content: center;
     height: 160px;
     width: 160px;
     border-radius: 15%;
@@ -111,28 +117,20 @@
     border: 1px solid #1ed760;
 }
 
-.song > div {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    height: 50%;
-    width: 100%;
-}
-
-.song > div > p {
+.song > p {
     margin-bottom: 5px;
 }
 
-.song > div > div {
+.song > div {
     display: flex;
     flex-flow: row;
-    align-items: center;
+    align-items: end;
     justify-content: space-evenly;
     height: 50%;
     width: 100%;
 }
 
-.song > div > div > button {
+.song > div > button {
     border-radius: 15px;
     font-size: 12px;
     height: 30px;

@@ -6,18 +6,11 @@
 </div>
 
 <div class="songs" *ngIf="songs; else loadingSongs">
-  <div *ngFor="let song of songs" (click)="showSong(song.id)" class="song">
-    <div>
-      <img [src]="song.img" alt="{{ song.name }}" width="100">
-    </div>
-    <div>
-      <p>{{ song.name }}</p> 
-      <div>
-        <ng-container *ngFor="let performerId of song.performers">
-          <button *ngIf="getPerformerName(performerId)" (click)="showPerformer(performerId, $event)">{{ getPerformerName(performerId) }}</button>
-        </ng-container>
-      </div>
-    </div>
+  <div *ngFor="let song of songs" (click)="showSong(song.id)" class="song" style="background-image: url('{{song.img}}')">
+    <p>{{ song.name }}</p> 
+    <ng-container *ngFor="let performerId of song.performers"> 
+      <a  *ngIf="getPerformerName(performerId)" (click)="showPerformer(performerId, $event)">{{getPerformerName(performerId)}}</a>
+    </ng-container>
   </div>
 </div>
 
