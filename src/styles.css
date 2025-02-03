@@ -2,7 +2,7 @@
     position: sticky;
     top: 0;
     background-color: #121212;
-    box-shadow: 5px 0 10px 2px #094136;
+    box-shadow: 10px -7px 20px 2px #1ed760;
     padding: 10px 20px;
     display: flex;
     flex-flow: wrap;
@@ -50,7 +50,7 @@
     content: '';
     position: absolute;
     background: transparent;
-    bottom: -11px;
+    bottom: -12px;
     transition: 0.5s;
     height: 4px;
     z-index: 1;
@@ -63,10 +63,13 @@
 }
 
 .bodyClass {
-    background-color: #1c2833;
+    background-color: #292929;
     display: flex;
     flex-flow: column;
-    justify-content: space-around;
+    justify-content: center;
+    min-height: 824px;
+    color: #ebedee;
+    padding: 20px;
 }
 
 .albumTitle {
@@ -186,4 +189,89 @@
 .socialMedia svg {
     height: 16px;
     fill: #d0d3d4;
+}
+
+.ownCarousel {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border-radius: 30px;
+    width: auto;
+    height: 300px;
+    margin: 20px;
+    overflow: hidden;
+    background-color: #121212;
+}
+
+.carouselContainer {
+    display: flex;
+    flex-flow: nowrap;
+    width: 100%;
+    height: 100%;
+}
+
+.carouselContainer > div{
+    width: 50%;
+    height: auto;
+}
+
+.carouselImg {
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.carouselImg > div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(28, 40, 51, 0.8);
+}
+
+.carouselImg ul {
+    margin: 0;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+}
+
+.carouselImg button{
+    width: 32px;
+    height: 32px;
+    visibility: hidden;
+    position: relative;
+    display: block;
+}
+
+.carouselImg button::after{
+    content: '';
+    position: absolute;
+    visibility: visible;
+    left: 11px;
+    top: 11px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid #1ed760;
+}
+
+.carouselImg button:hover::after{
+    border-width: 2px;
+}
+
+.carouselImg button.active::after{
+    background-color: #1ed760;
+}
+
+.carouselInfo {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1ed760;
 }

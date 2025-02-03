@@ -9,6 +9,7 @@ import { PerformersComponent } from './components/performers/performers';
 import { HomeComponent } from './components/home/home';
 import { SongComponent } from './components/song/song';
 import { FooterComponent } from './components/footer/footer';
+import { TopTracksComponent } from './components/topTracks/topTracks';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FooterComponent } from './components/footer/footer';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
+    TopTracksComponent,
     AlbumComponent,
     PerformersComponent,
     SongComponent

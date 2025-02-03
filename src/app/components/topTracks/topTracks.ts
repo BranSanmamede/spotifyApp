@@ -11,15 +11,19 @@ import { Album } from '../../interfaces/album';
 export class TopTracksComponent implements OnInit{
   
   albums: Album[] = [];
+  selectedAlbum: Album | null = null;
   
   constructor(private utilService: UtilService, private router: Router) {}
   
   ngOnInit() {
     this.albums = this.utilService.getAlbums();
+    if(this.albums.length > 0) {
+      this.selectedAlbum = this.albums[0];
+    }
   }
-  
-  getSongName(id: number) {
-    return this.utilService.getAlbumByID(id)?.name;
+
+  selectAlbum(album: Album) {
+    this.selectedAlbum = album;  
   }
   
   showAlbum(id: number) {

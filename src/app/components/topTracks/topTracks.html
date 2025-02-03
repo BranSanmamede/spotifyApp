@@ -1,0 +1,20 @@
+<div class="ownCarousel">
+    <div class="title">
+        <h1>Top Tracks</h1>
+    </div>
+    <div class="carouselContainer">
+        <div [ngStyle]="{ 'background-image': 'url(' + selectedAlbum?.img + ')' }" class="carouselImg">
+            <div>
+                <ul>
+                    <li *ngFor="let album of albums; let i = index">
+                        <button type="button" role="tab" [attr.aria-label]="(i + 1) + ' de ' + albums.length" (click)="selectAlbum(album)" [class.active]="selectedAlbum === album"></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div *ngIf="selectedAlbum" class="carouselInfo">
+            <h1>{{selectedAlbum.name}}</h1> 
+            <p>Artistas: {{ selectedAlbum.songs.join(', ') }}</p>
+        </div>
+    </div>
+</div>
