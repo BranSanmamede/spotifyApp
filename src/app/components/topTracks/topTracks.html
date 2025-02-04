@@ -12,9 +12,16 @@
                 </ul>
             </div>
         </div>
-        <div *ngIf="selectedAlbum" class="carouselInfo">
+        <div *ngIf="selectedAlbum" class="carouselInfo" (mouseenter)="showButton = true" (mouseleave)="showButton = false" (click)="showAlbum(selectedAlbum.id)">
             <h1>{{selectedAlbum.name}}</h1> 
-            <p>Artistas: {{ selectedAlbum.songs.join(', ') }}</p>
+            <ng-container *ngIf="songs.length > 0; else noSongs">
+                <span *ngFor="let song of songs | slice:0:3">{{ song.name }}{{ songs.indexOf(song) < 2 ? ', ' : '' }}</span>
+                <span *ngIf="selectedAlbum.songs.length > 3">...</span>
+            </ng-container>
+            <ng-template #noSongs>
+                <span>No hay canciones disponibles</span>
+            </ng-template>
+            <span class="afterOrBefore"></span>
         </div>
     </div>
 </div>
