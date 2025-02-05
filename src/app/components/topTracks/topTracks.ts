@@ -21,7 +21,7 @@ export class TopTracksComponent implements OnInit, OnDestroy{
   constructor(private utilService: UtilService, private router: Router) {}
   
   ngOnInit() {
-    this.albums = this.utilService.getAlbums();
+    this.albums = this.utilService.getTopTracks();
     if(this.albums.length > 0) {
       this.selectedAlbum = this.albums[0];
       this.loadSongsForAlbum();

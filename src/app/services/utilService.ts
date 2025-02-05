@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import performers from '../../../public/json/performers.json';
 import songs from '../../../public/json/songs.json';
 import albums from '../../../public/json/albums.json';
+import topTracks from '../../../public/json/topTracks.json';
 import { Performer } from '../interfaces/performer';
 import { Song } from '../interfaces/song';
 import { Album } from '../interfaces/album';
@@ -12,6 +13,7 @@ export class UtilService {
   private performers:Performer[] = performers;
   private songs:Song[] = songs;
   private albums:Album[] = albums;
+  private topTracks:number[] = topTracks;
   
   getAlbums() {
     return this.albums;
@@ -23,6 +25,10 @@ export class UtilService {
   
   getPerformers() {
     return this.performers;
+  }
+
+  getTopTracks() {
+    return this.topTracks.map(id => this.getAlbumByID(id)).filter(album => album != undefined);
   }
   
   getAlbumByID(id: number): Album | undefined{
