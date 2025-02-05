@@ -2,7 +2,7 @@
   <div>
     <img [src]="album.img" alt="{{ album.name }}" width="100">
   </div>
-  <p>{{album?.name}}</p>
+  <p>{{album.name}}</p>
 </div>
 
 <div class="songs" *ngIf="songs; else loadingSongs">

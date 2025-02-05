@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UtilService } from '../../services/utilService';
 import { Album } from '../../interfaces/album';
@@ -17,6 +17,8 @@ export class TopTracksComponent implements OnInit, OnDestroy{
   showButton: boolean = false;
   currentIndex: number = 0;
   interval!: any;
+
+  @Input('orientation') orientation!: string;
   
   constructor(private utilService: UtilService, private router: Router) {}
   

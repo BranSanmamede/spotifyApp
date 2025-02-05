@@ -2,7 +2,7 @@
     <div class="title">
         <h1>Top Tracks</h1>
     </div>
-    <div class="carouselContainer">
+    <div class="carouselContainer" [ngStyle]="{'flex-flow': orientation}">
         <div [ngStyle]="{ 'background-image': 'url(' + selectedAlbum?.img + ')' }" class="carouselImg">
             <div>
                 <ul>
