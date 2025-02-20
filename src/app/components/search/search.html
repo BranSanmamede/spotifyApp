@@ -1,0 +1,19 @@
+<div class="search-results">
+    <div *ngIf="songs">
+        <ul>
+            <li *ngFor="let song of songs">{{ song.name }}</li>
+        </ul>
+    </div>
+    
+    <div *ngIf="performers">
+        <ul>
+            <li *ngFor="let performer of performers">{{ performer.name }}</li>
+        </ul>
+    </div>
+    
+    <div *ngIf="albums">
+        <ul>
+            <li *ngFor="let album of albums">{{ album.name }}</li>
+        </ul>
+    </div>
+</div>

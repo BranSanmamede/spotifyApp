@@ -50,4 +50,8 @@ export class UtilService {
   findPerformers(text: string): Performer[] {
     return this.performers.filter(performers => performers.name.toLowerCase().includes(text.toLowerCase()));
   }
+  
+  findAlbums(text: string): Album[] {
+    return this.albums.filter(album => album.name.toLowerCase().includes(text.toLowerCase()));
+  }
 }

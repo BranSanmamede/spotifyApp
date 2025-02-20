@@ -1,0 +1,114 @@
+.ownCarousel {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border-radius: 30px;
+    width: auto;
+    height: 300px;
+    margin: 20px;
+    overflow: hidden;
+    background-color: #121212;
+}
+
+.carouselContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.carouselContainer > div{
+    width: 50%;
+    height: auto;
+}
+
+.carouselImg {
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.carouselImg > div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(28, 40, 51, 0.8);
+}
+
+.carouselImg ul {
+    margin: 0;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+}
+
+.carouselImg button{
+    width: 32px;
+    height: 32px;
+    visibility: hidden;
+    position: relative;
+    display: block;
+}
+
+.carouselImg button::after{
+    content: '';
+    position: absolute;
+    visibility: visible;
+    left: 11px;
+    top: 11px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid #1ed760;
+}
+
+.carouselImg button:hover::after{
+    border-width: 2px;
+}
+
+.carouselImg button.active::after{
+    background-color: #1ed760;
+}
+
+.carouselInfo {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1ed760;
+    position: relative;
+}
+
+.afterOrBefore {
+    position: absolute;
+    cursor: pointer;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.afterOrBefore::after {
+    content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m7.05%203.606%2013.49%207.788a.7.7%200%200%201%200%201.212L7.05%2020.394A.7.7%200%200%201%206%2019.788V4.212a.7.7%200%200%201%201.05-.606z%22%20fill%3D%22%231ed760%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E');
+    position: absolute;
+    visibility: hidden;
+    opacity: 1;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 15px;
+    background-color: #333;
+}
+
+.carouselInfo:hover .afterOrBefore::after {
+    visibility: visible;
+}
+
+.afterOrBefore:hover::after {
+    box-shadow: 1px 1px 1px 1px;
+    background-color: #000;
+}

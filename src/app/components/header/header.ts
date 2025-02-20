@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-header',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
     templateUrl: './header.html'
 })
 export class HeaderComponent {
+    
+    constructor(private router: Router) {}
 
+    onSearch(query: String, type: string) {
+        this.router.navigate(['/search'], {queryParams: {query: query, type: type}});
+    }
 }

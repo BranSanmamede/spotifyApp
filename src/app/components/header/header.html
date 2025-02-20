@@ -14,4 +14,13 @@
       <li><a routerLink="/home"><span>Home</span></a></li>
     </ul>
   </div>
+  <div class="search-container">
+    <input #searchInput type="text" placeholder="Buscar..." />
+    <select #searchType>
+      <option value="songs">Canciones</option>
+      <option value="performers">Artistas</option>
+      <option value="albums">Álbumes</option>
+    </select>
+    <button (click)="onSearch(searchInput.value, searchType.value)">Buscar</button>
+  </div>
 </div>

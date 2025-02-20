@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home';
 import { SongComponent } from './components/song/song';
 import { FooterComponent } from './components/footer/footer';
 import { TopTracksComponent } from './components/topTracks/topTracks';
+import { SearchComponent } from './components/search/search';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TopTracksComponent } from './components/topTracks/topTracks';
     TopTracksComponent,
     AlbumComponent,
     PerformersComponent,
-    SongComponent
+    SongComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
